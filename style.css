@@ -1,0 +1,341 @@
+/* --- ROOT E VARIÁVEIS --- */
+:root {
+    --bg: #0b0c10;
+    --panel: #111217;
+    --muted: #9aa3af;
+    --text: #eef2f6;
+    --brand: #2dd4bf;
+    --brand-2: #60a5fa;
+    --brand-italy-red: #d62828;
+    --brand-italy-green: #007f5f;
+    --border: #20222b;
+    --focus: #f59e0b;
+    --link: #93c5fd;
+    --maxw: 1200px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f7fafc;
+        --panel: #ffffff;
+        --muted: #4b5563;
+        --text: #0f172a;
+        --border: #e5e7eb;
+        --link: #1d4ed8;
+    }
+}
+
+/* --- RESET E BODY --- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Merriweather", serif;
+}
+
+/* --- LINKS --- */
+a {
+    color: var(--link);
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--brand-italy-green);
+    transform: translateX(4px);
+}
+
+a:focus,
+button:focus,
+[tabindex]:focus {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+}
+
+/* --- SKIP LINK --- */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+    background: var(--panel);
+    color: var(--text);
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    border: 1px solid var(--border);
+}
+
+/* --- HEADER --- */
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(6px);
+    background: color-mix(in oklab, var(--bg) 80%, transparent);
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, var(--brand-italy-green), white, var(--brand-italy-red));
+    border-image-slice: 1;
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: .75rem 1rem;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.tag {
+    font-size: .75rem;
+    color: var(--muted);
+}
+
+/* --- LAYOUT --- */
+.layout {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr 260px;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: start;
+}
+
+nav,
+aside,
+main {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+}
+
+nav,
+aside {
+    position: sticky;
+    top: 4.5rem;
+    align-self: start;
+    /* garante alinhamento ao topo */
+}
+
+nav {
+    padding: 1rem;
+}
+
+aside {
+    padding: 1rem; /* igual ao nav */
+}
+
+nav h2,
+aside h2 {
+    margin: .25rem 0 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--brand-italy-green);
+}
+
+/* --- LISTAS --- */
+.nav-list,
+.toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: .5rem;
+}
+
+.nav-list a,
+.toc a {
+    display: block;
+    padding: .4rem .6rem;
+    border-radius: .6rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover e ativo */
+.nav-list a:hover,
+.toc a:hover {
+    background: color-mix(in oklab, var(--panel), var(--brand-italy-green) 15%);
+}
+
+.nav-list a[aria-current="page"],
+.toc a:target {
+    border-color: var(--brand-italy-green);
+    background: color-mix(in oklab, var(--panel), var(--brand-italy-green) 20%);
+}
+
+/* Destaque do link toc usando :target */
+.toc a {
+    position: relative;
+}
+
+.toc a:target {
+    font-weight: 600;
+    background: color-mix(in oklab, var(--panel), var(--brand-italy-green) 25%);
+    border-color: var(--brand-italy-green);
+}
+
+/* --- MAIN --- */
+main {
+    padding: 1rem;
+}
+
+article {
+    display: grid;
+    gap: 1.25rem;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* FIGURES */
+figure {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    font-size: .9rem;
+    color: var(--muted);
+    padding: .5rem .75rem;
+    background: color-mix(in oklab, var(--panel), black 10%);
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .35rem .6rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--panel), var(--brand) 8%);
+    font-size: .8rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr -1fr;
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1rem;
+    background: color-mix(in oklab, var(--panel), white 2%);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.meta {
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    max-width: var(--maxw);
+    margin: 2rem auto;
+    padding: 1rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+.to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: .6rem .8rem;
+    border-radius: .8rem;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    transition: background 0.3s ease;
+}
+
+.to-top:hover {
+    background: var(--brand-italy-green);
+    color: white;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1100px) {
+    .layout {
+        grid-template-columns: 220px 1fr;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    nav,
+    header {
+        position: static;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}

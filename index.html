@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itália — Enciclopédia Acessível</title>
+    <meta name="description" content="Recriação estilo Wikipedia sobre a Itália com HTML semântico e acessibilidade." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header role="banner">
+        <div class="header-inner" aria-label="Cabeçalho do site">
+            <div>
+                <div class="logo" aria-label="Título do site">Itália — Enciclopédia Acessível</div>
+                <div class="tag">Projeto estilo Wikipedia • HTML semântico • A11y</div>
+            </div>
+            <span class="pill" aria-label="Tema do artigo">Tema: Itália</span>
+        </div>
+    </header>
+
+    <div class="layout" role="presentation">
+        <!-- Coluna esquerda -->
+        <nav aria-label="Links principais sobre Itália">
+            <h2>Explorar</h2>
+            <ul class="nav-list">
+                <li><a href="#italia" aria-current="page">Itália — visão geral</a></li>
+                <li><a href="#sardenha">Sardenha (praias)</a></li>
+                <li><a href="#costa-amalfitana">Costa Amalfitana</a></li>
+                <li><a href="#sicilia">Sicília</a></li>
+                <li><a href="#toscana">Toscana (campos de flores)</a></li>
+                <li><a href="#roma">Roma</a></li>
+                <li><a href="#veneza">Veneza</a></li>
+                <li><a href="#gastronomia">Gastronomia</a></li>
+                <li><a href="#referencias">Referências</a></li>
+            </ul>
+
+            <h2>Recursos externos</h2>
+            <ul class="nav-list">
+                <li><a href="https://pt.wikipedia.org/wiki/It%C3%A1lia" target="_blank"
+                        rel="noopener noreferrer">Wikipedia: Itália</a></li>
+                <li><a href="https://www.italia.it/pt" target="_blank" rel="noopener noreferrer">Portal oficial de
+                        turismo</a></li>
+                <li><a href="https://whc.unesco.org/en/statesparties/it" target="_blank"
+                        rel="noopener noreferrer">UNESCO — Patrimônio na Itália</a></li>
+            </ul>
+        </nav>
+
+        <!-- Coluna central -->
+        <main id="conteudo" tabindex="-1" role="main">
+            <article aria-labelledby="italia">
+
+                <!-- Itália -->
+                <section id="italia">
+                    <h1>Itália</h1>
+                    <p class="meta">País europeu conhecido por sua rica história, arte, gastronomia e paisagens que vão
+                        de picos alpinos a praias mediterrâneas.</p>
+                    <div class="hero">
+                        <div>
+                            <p>
+                                A <strong>Itália</strong> é um destino que mistura passado e presente: ruínas romanas,
+                                renascença toscana, vilas coloridas à beira-mar e uma culinária celebrada no mundo todo.
+                            </p>
+                            <ul>
+                                <li>Capital: Roma</li>
+                                <li>Idioma: Italiano</li>
+                                <li>Moeda: Euro (€)</li>
+                                <li>Regiões em destaque: Sardenha, Sicília, Toscana, Campânia</li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <img src="assets/italia-mapa.jpg"
+                                alt="Mapa ilustrativo da Itália com destaque para Sardenha, Sicília, Toscana e Costa Amalfitana">
+                            <figcaption>Mapa ilustrativo da Itália. Fonte: Pixabay.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- Sardenha -->
+                <section id="sardenha">
+                    <h2>Sardenha</h2>
+                    <p>A <strong>Sardenha</strong> é famosa por águas azuis cristalinas e praias de areia clara.</p>
+                    <div class="grid-2">
+                        <figure>
+                            <img src="assets/sardenha.jpg" alt="Praia na Sardenha com mar azul turquesa e areia branca">
+                            <figcaption>Sardenha — mar cristalino e praias preservadas.</figcaption>
+                        </figure>
+                        <div class="card">
+                            <h3>Highlights</h3>
+                            <ul>
+                                <li>Trilhas costeiras</li>
+                                <li>Vilarejos históricos</li>
+                                <li>Áreas de preservação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="costa-amalfitana">
+                    <h2>Costa Amalfitana</h2>
+                    <p>Conhecida por vilas como Positano e Amalfi, estradas panorâmicas e limoeiros perfumados.</p>
+                    <figure>
+                        <img src="assets/costa-amalfitana.jpg" alt="Positano na Costa Amalfitana">
+                        <figcaption>Costa Amalfitana — vilas coloridas e vistas incríveis.</figcaption>
+                    </figure>
+                </section>
+
+                <section id="sicilia">
+                    <h2>Sicília</h2>
+                    <p>Lar do vulcão Etna e de sítios arqueológicos gregos e romanos.</p>
+                    <figure>
+                        <img src="assets/sicilia.jpg" alt="Vista de Taormina na Sicília com o Etna ao fundo">
+                        <figcaption>Sicília — história, vulcões e praias no mesmo lugar.</figcaption>
+                    </figure>
+                </section>
+
+                <section id="toscana">
+                    <h2>Toscana</h2>
+                    <p>Colinas onduladas, vilas medievais, vinhedos e campos floridos.</p>
+                    <div class="grid-2">
+                        <figure>
+                            <img src="assets/toscana.jpg" alt="Colinas verdes na Toscana ao entardecer">
+                            <figcaption>Toscana — colinas ao entardecer.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/toscana-piscinas.jpg" alt="Piscinas termais na Toscana">
+                            <figcaption>Toscana — piscinas termais relaxantes.</figcaption>
+                        </figure>
+                        <div class="card">
+                            <h3>Destaques culturais</h3>
+                            <ul>
+                                <li>Florença e o Renascimento</li>
+                                <li>Vinhos Chianti e Montalcino</li>
+                                <li>Cidades como Siena e San Gimignano</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="roma">
+                    <h2>Roma</h2>
+                    <p>O Coliseu, o Panteão e as praças contam a história de séculos.</p>
+                    <figure>
+                        <img src="assets/roma.jpg" alt="Coliseu de Roma iluminado">
+                        <figcaption>Roma — história viva em cada esquina.</figcaption>
+                    </figure>
+                </section>
+
+                <section id="veneza">
+                    <h2>Veneza</h2>
+                    <p>Canais, arquitetura e atmosfera romântica única.</p>
+                    <figure>
+                        <img src="assets/veneza.jpg" alt="Gôndolas no Grande Canal de Veneza">
+                        <figcaption>Veneza — charme atemporal.</figcaption>
+                    </figure>
+                </section>
+
+                <section id="gastronomia">
+                    <h2>Gastronomia</h2>
+                    <p>Massas, frutos do mar, queijos e vinhos, cada região com sua especialidade.</p>
+                    <div class="grid-2">
+                        <figure>
+                            <img src="assets/pasta.jpg" alt="Prato de espaguete à carbonara">
+                            <figcaption>Massas italianas — espaguete à carbonara.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/gelato.jpg" alt="Gelato de morango e pistache">
+                            <figcaption>Gelato — sobremesa típica italiana.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- Referências -->
+                <section id="referencias">
+                    <h2>Referências</h2>
+                    <ul>
+                        <li>Texto adaptado de <a href="https://pt.wikipedia.org/wiki/It%C3%A1lia"
+                                target="_blank">Wikipedia</a> (CC BY-SA 3.0).</li>
+                        <li>Imagens: Pixabay e Unsplash.</li>
+                    </ul>
+                </section>
+
+            </article>
+        </main>
+
+        <!-- Coluna direita -->
+        <aside aria-label="Navegação por seções">
+            <h2>Neste artigo</h2>
+            <ul class="toc" id="toc">
+                <li><a href="#italia" class="active">Itália</a></li>
+                <li><a href="#sardenha">Sardenha</a></li>
+                <li><a href="#costa-amalfitana">Costa Amalfitana</a></li>
+                <li><a href="#sicilia">Sicília</a></li>
+                <li><a href="#toscana">Toscana</a></li>
+                <li><a href="#roma">Roma</a></li>
+                <li><a href="#veneza">Veneza</a></li>
+                <li><a href="#gastronomia">Gastronomia</a></li>
+                <li><a href="#referencias">Referências</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer role="contentinfo" aria-label="Rodapé">
+        <p>Feito com ♥ para o desafio DIO — Trilha HTML • Semântica & Acessibilidade.</p>
+    </footer>
+
+    <a class="to-top" href="#conteudo" aria-label="Voltar ao topo">↑ Topo</a>
+</body>
+
+</html>
